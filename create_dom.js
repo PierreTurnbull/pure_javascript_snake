@@ -40,5 +40,4 @@ main_container.style.display = "flex";
 
 game.width = 1200;
 game.height = 600;
-game.style.backgroundColor = "#F00";
 game.style.margin = "auto";

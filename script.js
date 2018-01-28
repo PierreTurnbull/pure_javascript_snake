@@ -11,6 +11,7 @@ var time_stamp;
 
 time = 0;
 time_stamp = 0;
+set_new_color();
 setInterval(function(){
   if (!pause) {
     create_target();

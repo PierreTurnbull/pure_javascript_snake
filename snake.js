@@ -66,9 +66,9 @@ function move_snake(sn) {
 
 // RENDER SNAKE
 function render_snake() {
-  ctx.fillStyle = "#FDD";
+  ctx.fillStyle = colors[Object.keys(colors)[color]]["background"];
   ctx.fillRect(0, 0, 1200, 800);
-  ctx.fillStyle = "#F00";
+  ctx.fillStyle = colors[Object.keys(colors)[color]]["snake"];
   for (let i = 0; i < snake.length; i++) {
     ctx.fillRect(snake[i]["x"], snake[i]["y"], snake_size, snake_size);
   }
@@ -97,17 +97,19 @@ var last_turn;
 var targets;
 var target_size;
 var ctx;
+var color;
 
 pause       = false;
 next_key    = null;
 snake       = [];
-snake_size  = 30;
-snake_speed = 6;
+snake_size  = 50;
+snake_speed = 10;
 new_blocks  = 0;
 last_turn   = 0;
 targets     = [];
 target_size = 20;
 ctx         = game.getContext("2d");
+color       = 0;
 for (let i = 0; i < 20; i++) {
   snake[i] = {x: 300 - i * snake_speed, y: 450, velx: snake_speed, vely: 0};
 }
