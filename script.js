@@ -5,8 +5,21 @@ window.addEventListener("resize", function(){
   new_size();
 });
 
-var i = 0;
-// setInterval(function(){
-//   ctx.fillRect(10 + i, 10 + i, 10, 10);
-//   i += 15;
-// }, 1000);
+// MAKES CHANGES EVERY 15ms (60fps)
+var time;
+var time_stamp;
+
+time = 0;
+time_stamp = 0;
+setInterval(function(){
+  if (!pause) {
+    create_target();
+    change_snake_direction();
+    move_snake(snake);
+    transmit_snake_direction(snake);
+    check_collisions();
+    snake_grows();
+    render_snake();
+    render_targets();
+  }
+}, 15);

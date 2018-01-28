@@ -9,7 +9,7 @@ style.innerHTML = "\
   }\
   \
   body {\
-    background-color: #B99;\
+    background-color: #F00;\
   }\
   \
   .snake_block {\
@@ -38,16 +38,7 @@ main_container.appendChild(game);
 
 main_container.style.display = "flex";
 
-game.style.backgroundColor = "#CCBFBF";
+game.width = 1200;
+game.height = 600;
+game.style.backgroundColor = "#F00";
 game.style.margin = "auto";
-game.style.boxSizing = "border-box";
-game.style.border = "1px solid grey";
-
-// CREATE SNAKE
-var snake;
-var ctx;
-
-ctx = game.getContext("2d");
-ctx.fillStyle = "red";
-snake = [];
-snake[0] = {x:0, y:0, dir:0};
