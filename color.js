@@ -11,6 +11,7 @@ var colors = {
     menu:       "#000",
     menu_text:  "#000",
     snake:      "#222",
+    snake_eye:  "#000",
     target:     "#111"
   },
   color_r: {
@@ -19,6 +20,7 @@ var colors = {
     menu:       "#F22",
     menu_text:  "#D00",
     snake:      "#F00",
+    snake_eye:  "#C00",
     target:     "#D00"
   },
   color_g: {
@@ -27,6 +29,7 @@ var colors = {
     menu:       "#3F3",
     menu_text:  "#0B0",
     snake:      "#0D0",
+    snake_eye:  "#0A0",
     target:     "#0C0"
   },
   color_b: {
@@ -35,6 +38,7 @@ var colors = {
     menu:       "#33F",
     menu_text:  "#009",
     snake:      "#00F",
+    snake_eye:  "#00C",
     target:     "#00C"
   },
   color_rg: {
@@ -43,6 +47,7 @@ var colors = {
     menu:       "#FF2",
     menu_text:  "#EE0",
     snake:      "#FF0",
+    snake_eye:  "#DD0",
     target:     "#E7E700"
   },
   color_rb: {
@@ -51,6 +56,7 @@ var colors = {
     menu:       "#F3F",
     menu_text:  "#D0D",
     snake:      "#F0F",
+    snake_eye:  "#D0D",
     target:     "#D0D"
   },
   color_gb: {
@@ -59,6 +65,7 @@ var colors = {
     menu:       "#0DD",
     menu_text:  "#0DD",
     snake:      "#0FF",
+    snake_eye:  "#0DD",
     target:     "#0DD"
   },
   color_rgb: {
@@ -67,6 +74,7 @@ var colors = {
     menu:       "#000",
     menu_text:  "#FFF",
     snake:      "#EEE",
+    snake_eye:  "#DDD",
     target:     "#CCC"
   }
 };

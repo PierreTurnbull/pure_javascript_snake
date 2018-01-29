@@ -64,6 +64,42 @@ function move_snake(sn) {
   }
 }
 
+// RENDER SNAKE EYES INSIDE
+function render_snake_eyes_inside() {
+  ctx.fillStyle = colors[Object.keys(colors)[color]]["snake_eye"];
+  if        (snake[0]["velx"] == -snake_speed) {
+    ctx.fillRect(snake[0]["x"] + 5, snake[0]["y"] + 8, snake_size / 8, snake_size / 8);
+    ctx.fillRect(snake[0]["x"] + 5, snake[0]["y"] + snake_size - snake_size / 8 - 8, snake_size / 8, snake_size / 8);
+  } else if (snake[0]["velx"] == snake_speed) {
+    ctx.fillRect(snake[0]["x"] + snake_size - snake_size / 8 - 5, snake[0]["y"] + 8, snake_size / 8, snake_size / 8);
+    ctx.fillRect(snake[0]["x"] + snake_size - snake_size / 8 - 5, snake[0]["y"] + snake_size - snake_size / 8 - 8, snake_size / 8, snake_size / 8);
+  } else if (snake[0]["vely"] == -snake_speed) {
+    ctx.fillRect(snake[0]["x"] + 8, snake[0]["y"] + 5, snake_size / 8, snake_size / 8);
+    ctx.fillRect(snake[0]["x"] + snake_size - snake_size / 8 - 8, snake[0]["y"] + 5, snake_size / 8, snake_size / 8);
+  } else if (snake[0]["vely"] == snake_speed) {
+    ctx.fillRect(snake[0]["x"] + 8, snake[0]["y"] + snake_size - snake_size / 8 - 5, snake_size / 8, snake_size / 8);
+    ctx.fillRect(snake[0]["x"] + snake_size - snake_size / 8 - 8, snake[0]["y"] + snake_size - snake_size / 8 - 5, snake_size / 8, snake_size / 8);
+  }
+}
+
+// RENDER SNAKE EYES
+function render_snake_eyes() {
+  ctx.fillStyle = colors[Object.keys(colors)[color]]["background"];
+  if        (snake[0]["velx"] == -snake_speed) {
+    ctx.fillRect(snake[0]["x"] + 5, snake[0]["y"] + 5, snake_size / 4, snake_size / 4);
+    ctx.fillRect(snake[0]["x"] + 5, snake[0]["y"] + snake_size - snake_size / 4 - 5, snake_size / 4, snake_size / 4);
+  } else if (snake[0]["velx"] == snake_speed) {
+    ctx.fillRect(snake[0]["x"] + snake_size - snake_size / 4 - 5, snake[0]["y"] + 5, snake_size / 4, snake_size / 4);
+    ctx.fillRect(snake[0]["x"] + snake_size - snake_size / 4 - 5, snake[0]["y"] + snake_size - snake_size / 4 - 5, snake_size / 4, snake_size / 4);
+  } else if (snake[0]["vely"] == -snake_speed) {
+    ctx.fillRect(snake[0]["x"] + 5, snake[0]["y"] + 5, snake_size / 4, snake_size / 4);
+    ctx.fillRect(snake[0]["x"] + snake_size - snake_size / 4 - 5, snake[0]["y"] + 5, snake_size / 4, snake_size / 4);
+  } else if (snake[0]["vely"] == snake_speed) {
+    ctx.fillRect(snake[0]["x"] + 5, snake[0]["y"] + snake_size - snake_size / 4 - 5, snake_size / 4, snake_size / 4);
+    ctx.fillRect(snake[0]["x"] + snake_size - snake_size / 4 - 5, snake[0]["y"] + snake_size - snake_size / 4 - 5, snake_size / 4, snake_size / 4);
+  }
+}
+
 // RENDER SNAKE
 function render_snake() {
   ctx.fillStyle = colors[Object.keys(colors)[color]]["background"];
@@ -72,6 +108,8 @@ function render_snake() {
   for (let i = 0; i < snake.length; i++) {
     ctx.fillRect(snake[i]["x"], snake[i]["y"], snake_size, snake_size);
   }
+  render_snake_eyes();
+  render_snake_eyes_inside();
 }
 
 // EXTEND SNAKE'S BODY
