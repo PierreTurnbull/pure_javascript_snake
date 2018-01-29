@@ -7,4 +7,6 @@ With JavaScript and love <3
 - dynamic rendering with HTML canvas
 - snake can turn in each frame, yet he turns back safely without eating his own body
 - food appears randomly in the field every 1.5 seconds (never too close from the border)
+- no grid. grids suck. Snake is FREE to move however he likes!
+- cute little snaky eyes
 - game 100% responsive! Just try it with any device!
