@@ -13,6 +13,7 @@ function snake_food_collision() {
         // FOOD BOT RIGHT CORNER IS HIT
         (targets[i]["x"] +  target_size >= snake[0]["x"] && targets[i]["x"] + target_size <= snake[0]["x"] + snake_size &&
         targets[i]["y"] +   target_size >= snake[0]["y"] && targets[i]["y"] + target_size <= snake[0]["y"] + snake_size)) {
+      score++;
       return i;
     }
   }
@@ -43,9 +44,9 @@ function check_collisions() {
   let food_index;
 
   if (snake_body_collision(snake, snake.length)) {
-    console.log("body collision");
+    end_game();
   } else if (snake_wall_collision()) {
-    console.log("wall collision");
+    end_game();
   } else if ((food_index = snake_food_collision()) != -1) {
     destroy_target(food_index);
     new_blocks += snake_size / snake_speed * 2;

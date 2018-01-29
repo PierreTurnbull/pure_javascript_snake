@@ -24,9 +24,19 @@ window.addEventListener("keydown", function(event){
 
 // PAUSE OR UNPAUSE THE GAME
 window.addEventListener("keydown", function(event) {
-  if (pause == 0 && (event.keyCode == 80 || event.keyCode == 32)) {
-    pause = 1;
-  } else if (pause == 1 && (event.keyCode == 80 || event.keyCode == 32)) {
-    pause = 0;
+  if (event.keyCode == 80 || event.keyCode == 32 || event.keyCode == 27) {
+    if        (start == true && end == false && pause == false) {
+      start = false;
+    } else if (start == false && end == true && pause == false) {
+      end = false;
+      start = true;
+    } else if (start == false && end == false && pause == true) {
+      pause = false;
+    } else if (start == false && end == false && pause == false) {
+      pause = true;
+    } else {
+      console.log("FATAL ERROR, KEY CANNOT BE HANDLED");
+    }
+    time_stamp_pause = 0;
   }
 });

@@ -87,7 +87,6 @@ function snake_grows() {
 }
 
 // CREATE SNAKE
-var pause;
 var next_key;
 var snake;
 var snake_size;
@@ -98,8 +97,8 @@ var targets;
 var target_size;
 var ctx;
 var color;
+var score;
 
-pause       = false;
 next_key    = null;
 snake       = [];
 snake_size  = 50;
@@ -110,6 +109,7 @@ targets     = [];
 target_size = 20;
 ctx         = game.getContext("2d");
 color       = 0;
+score       = 0;
 for (let i = 0; i < 20; i++) {
   snake[i] = {x: 300 - i * snake_speed, y: 450, velx: snake_speed, vely: 0};
 }
