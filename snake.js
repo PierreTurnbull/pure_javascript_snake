@@ -64,6 +64,13 @@ function move_snake(sn) {
   }
 }
 
+// RENDER SCORE
+function render_score() {
+  ctx.fillStyle = colors[Object.keys(colors)[color]]["menu_text"];
+  ctx.font = "50px Arial";
+  ctx.fillText(score, 10, 50);
+}
+
 // RENDER SNAKE EYES INSIDE
 function render_snake_eyes_inside() {
   ctx.fillStyle = colors[Object.keys(colors)[color]]["snake_eye"];

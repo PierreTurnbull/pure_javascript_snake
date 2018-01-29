@@ -33,6 +33,7 @@ setInterval(function(){
       targets.splice(0, targets.length);
       render_snake();
       render_targets();
+      render_score();
     }
     if (time_stamp_pause < 30) {
       render_start();
@@ -52,5 +53,6 @@ setInterval(function(){
     snake_grows();
     render_snake();
     render_targets();
+    render_score();
   }
 }, 15);
